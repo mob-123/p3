@@ -24,12 +24,12 @@ public class Movies {
     Movie temp;
     int highSub = array.length;
     for (a = 0; a < highSub; ++a) {
-      for (b = 0; b < highSub; ++b) {
-        String first = array[b].getName();
+      for (b = 0; b < highSub -a - 1; ++b) {
+        String first = array[a].getName();
         String second = array[b + 1].getName();
         if (first.compareTo(second) < 0) {
           temp = array[b];
-          array[b] = array[b];
+          array[b] = array[b+1];
           array[b + 1] = temp;
         }
       }
